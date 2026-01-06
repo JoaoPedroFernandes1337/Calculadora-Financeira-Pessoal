@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Calculadora Financeira</title>
+</head>
+<body>
+    <div class="container"> <h1>Meu Controle Financeiro 💰</h1>
+    <input type="number" id="valor" placeholder="Digite o valor">
+    <input type="text" id="categoria" placeholder="Digite a categoria">
+    <input type="text" id="descricao" placeholder="Deseja adicionar uma descriçao?">
+    <select id="tipo">
+        <option value="entrada">Entrada (Ganho)</option>>
+        <option value="saida">Saida (Gasto)</option>
+    </select>
+    <button onclick="salvarDados()">Adicionar</button>
+    <h3>Saldo Atual: R$ <span id="campo-saldo">0</span></h3>
+    <hr> <h3>Extrato Detalhado</h3>
+    <ul id="lista-extrato">
+        </ul>
+
+    </div> <script src="app.js"></script>
+</body>
+</html>

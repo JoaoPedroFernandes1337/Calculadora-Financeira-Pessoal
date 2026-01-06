@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(149, 145, 145);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.container {
+    background-color: white;   /* O fundo da caixa será branco */
+    width: 90%;                /* Ocupa 90% da largura da tela */
+    max-width: 500px;          /* Mas para de crescer se a tela for muito grande */
+    margin: 50px auto;         /* Margem automática nas laterais centraliza a caixa */
+    padding: 20px;             /* Espaço interno para o texto não colar na borda */
+    border-radius: 10px;       /* Arredonda os cantos */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Cria aquela sombra chique */
+}
+
+input, select, button {
+    width: 100%;           /* Estica para ocupar todo o espaço */
+    padding: 12px;         /* Deixa os campos mais 'gordinhos' e fáceis de clicar */
+    margin: 8px 0;         /* Dá um respiro entre um e outro */
+    border: 1px solid #ddd; /* Borda cinza suave */
+    border-radius: 5px;    /* Cantos levemente arredondados */
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+}
+
+button {
+    background-color: #28a745; /* Verde Sucesso! */
+    color: white;              /* Texto branco */
+    font-size: 16px;           /* Letra maior */
+    font-weight: bold;         /* Negrito */
+    border: none;              /* Sem borda preta */
+    cursor: pointer;           /* Mãozinha quando passa o mouse */
+    transition: background 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+button:hover {
+    background-color: #218838; /* Fica um pouco mais escuro ao passar o mouse */
+}
+
+/* Tira as bolinhas da lista e o recuo esquerdo */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Dá um visual para cada linha do extrato */
+li {
+    background-color: #f8f9fa; /* Fundo cinza bem clarinho */
+    border-bottom: 1px solid #dee2e6; /* Linha separadora */
+    padding: 10px; /* Espaço interno */
+    margin-bottom: 5px; /* Espaço entre um item e outro */
+    color: #333; /* Cor do texto */
+}
