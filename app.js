@@ -1,28 +1,28 @@
-///Criando constantes das categorias dos gastos(Constante para eles nunca mudarem)!
+//Criando constantes das categorias dos gastos(Constante para eles nunca mudarem)!
 const CATEGORIA_GASOLINA = "Gasolina";
 const CATEGORIA_LANCHE = "Lanche";
 const CATEGORIA_MANUTENCAO = "Manutenção";
 
-///Criando constantes das categorias dos ganhos(Constante para eles nunca mudarem)!
+//Criando constantes das categorias dos ganhos(Constante para eles nunca mudarem)!
 const CATEGORIA_SALARIO = "Salário";
 const CATEGORIA_ENTREGAS = "Entregas";
 const CATEGORIA_EXTRAS= "Extras";
 
-///Criando a váriavel do saldo(Váriavel porque ele vai sempre mudar).
+//Criando a váriavel do saldo(Váriavel porque ele vai sempre mudar).
 let saldoAtual = 0;
 
 atualizarSaldo();
 
-///Criando função para exibir saldo atual na tela
+//Criando função para exibir saldo atual na tela
 function atualizarSaldo(){
     let saldoTela = document.getElementById("campo-saldo");
     saldoTela.textContent = saldoAtual;
 }
 
-///Criando lista para armazenar os gastos e ganhos!
+//Criando lista para armazenar os gastos e ganhos!
 let extrato = [];
 
-///Criando função para ler o extrato
+//Criando função para ler o extrato
 function verExtrato(){
     for (let i = 0; i < extrato.length; i++){
     console.log(`Extrato: R$${extrato[i].reais}, ${extrato[i].tipo}`);
@@ -30,7 +30,7 @@ function verExtrato(){
 }
 
 
-///Criando função para limpar as caixas depois de gravar os dados
+//Criando função para limpar as caixas depois de gravar os dados
 
 function limparDados(){
     document.getElementById("valor").value = "";
@@ -38,7 +38,7 @@ function limparDados(){
     document.getElementById("descricao").value = "";
 }
 
-///Criar função para filtrar dados
+//Criar função para filtrar dados
 function calcularTotalPorCategoria(categoriaAlvo) {
     let totalCategoria = 0;
     for(let t = 0; t < extrato.length; t++) {
@@ -53,7 +53,7 @@ function calcularTotalPorCategoria(categoriaAlvo) {
     }   
 }
 
-///Função para somar tudo
+//Função para somar tudo
 
 function exibirResumo(){
     let totalEntradas = 0;
@@ -74,17 +74,17 @@ function exibirResumo(){
     console.log(`Saídas: R$${Math.abs(totalSaidas)}`);
 }       
 
-///Criando uma função para adicionar o ganho!
+//Criando uma função para adicionar o ganho!
 function adicionarGanho(valor, categoria) {
-    ///O saldo atual recebe o valor inserido!
+    //O saldo atual recebe o valor inserido!
     saldoAtual = saldoAtual + valor;
-    ///Avisar no console a opreção!
+    //Avisar no console a opreção!
     console.log("Opa, entrou dinheiro!");
     console.log(`Valor: R$${valor}`);
     console.log(`Categoria: ${categoria}`);
     console.log(`O saldo atual é de R$ ${saldoAtual}`);
     console.log("-----------------------------");
-    ///adicionar no extrato o ganho!
+    //adicionar no extrato o ganho!
     extrato.push({reais: valor,
         tipo: categoria
     })
@@ -133,7 +133,7 @@ calcularTotalPorCategoria(CATEGORIA_GASOLINA); // Deve mostrar o total negativo 
 calcularTotalPorCategoria(CATEGORIA_SALARIO); // Deve mostrar o total positivo do salário
 exibirResumo();
 
-///Criando função de salvar dados
+//Criando função de salvar dados
 function salvarDados(){
     let valorDigitado = Number(document.getElementById("valor").value);
     let categoriaDigitada = document.getElementById("categoria").value;
